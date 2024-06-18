@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webpage
+  name: webpage
+  namespace: webpage
+spec:
+  selector:
+    matchLabels:
+      app: webpage
+  template:
+    metadata:
+      labels:
+        app: webpage
+    spec:
+      containers:
+        - name: webpage
+          image: ghcr.io/marcio-pessoa/webpage
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "50m"
+              memory: "48Mi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80

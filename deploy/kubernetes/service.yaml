@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webpage
+  name: webpage
+  namespace: webpage
+spec:
+  ports:
+    - name: "http"
+      port: 80
+  selector:
+    app: webpage
