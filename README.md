@@ -10,3 +10,5 @@ A simple page, intended to help with testing.
   author: adzica
   url: https://www.freeimages.com/photo/best-friends-1241017
 ```
+
+![Screenshot](screenshot.png "Screenshot")
